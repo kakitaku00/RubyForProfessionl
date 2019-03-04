@@ -35,3 +35,8 @@ def to_ints(hex)
   end
   ints
 end
+
+# リファクタリング
+def to_ints(hex)
+  hex.scan(/\w\w/).map(&:hex)
+end
